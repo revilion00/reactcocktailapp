@@ -1,0 +1,9 @@
+.about-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+  
+.about-p a {
+  text-decoration: none;
+  color: rgb(230, 23, 23);
+}

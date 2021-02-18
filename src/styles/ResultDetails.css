@@ -1,0 +1,59 @@
+.image {
+  width: 450px;
+  height: 500px;
+  display: block;
+  border-radius: 6px;
+}
+
+.result-details {
+  color: #fff;
+  display: flex;
+  margin: 150px 0px 0px 200px;
+  align-items: center;
+}
+
+.details-info {
+  margin-left: 50px;
+}
+
+.details-box {
+  margin: 30px 0px;
+}
+
+.details-info h3 {
+  font-size: 28px;
+}
+
+.paragraph {
+  margin: 10px 0px;
+  max-width: 600px;
+  letter-spacing: 0.10rem;
+}
+
+.paragraph.responsive {
+  overflow-y: scroll;
+  height: 120px;
+}
+
+.paragraph.responsive::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+
+.paragraph.responsive::-webkit-scrollbar {
+  width: 12px;
+  background-color: none;
+}
+
+.paragraph.responsive::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color:  #7B6DCC;
+  height: 40px;
+}
+
+ .span {
+  background-color: #7B6DCC;
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin-right: 5px;
+}
