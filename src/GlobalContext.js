@@ -40,12 +40,13 @@ const GlobalProvider = ({ children }) => {
                 } else {
                     setResults([]);
                 }
-                setLoading(false);
+                // setLoading(false);
             })
             .catch(error => {
                 console.log(error);
-                setLoading(false);
+                // setLoading(false);
             });
+            setLoading(false);
         }
         getResult();
     }, [input]);
