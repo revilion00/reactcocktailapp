@@ -8,15 +8,14 @@ const ResultDetails = () => {
 
   const { id } = useParams();
 
-  const urlByID = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
-
   const [resultDetails, setResultDetails] = useState([]);
 
   useEffect(() => {
+    const API_KEY = process.env.REACT_APP_API_KEY_ID;
     const getResultDetails = async () => {
       setLoading(true);
       await axios
-        .get(urlByID + id)
+        .get(API_KEY + id)
         .then((response) => {
           const { drinks } = response.data;
           if (drinks) {

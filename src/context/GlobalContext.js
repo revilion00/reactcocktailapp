@@ -5,8 +5,6 @@ const GlobalContext = React.createContext();
 
 const GlobalProvider = ({ children }) => {
   const [input, setInput] = useState("");
-  // const [results, setResults] = useState([]);
-  // const [loading, setLoading] = useState(false);
 
   const { results, loading, error } = useSearchCocktails(input);
 
@@ -17,6 +15,7 @@ const GlobalProvider = ({ children }) => {
         input,
         setInput,
         loading,
+        error,
       }}
     >
       {children}

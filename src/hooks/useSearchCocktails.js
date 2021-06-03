@@ -6,14 +6,12 @@ const useSearchCocktails = (input) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
 
-  const urlBySearch =
-    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
-
   useEffect(() => {
+    const API_KEY = process.env.REACT_APP_API_KEY_SEARCH;
     const handleSearchCocktail = async () => {
       setLoading(true);
       await axios
-        .get(urlBySearch + input)
+        .get(API_KEY + input)
         .then(async (response) => {
           const { drinks } = await response.data;
           if (drinks) {
