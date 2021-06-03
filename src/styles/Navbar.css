@@ -9,6 +9,7 @@
 }
 
 .navbar-title {
+  font-family: "Lobster", cursive;
   padding-left: 50px;
   color: #fff;
   font-size: 28px;
@@ -17,6 +18,7 @@
 
 .navbar-icon {
   font-size: 28px;
+  color: green;
 }
 
 .burger-icon {

@@ -9,7 +9,7 @@ const useSearchDetails = (id) => {
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY_ID;
 
-    const getResultDetails = async () => {
+    const handleSearchDetails = async () => {
       setLoading(true);
       await axios
         .get(API_KEY + id)
@@ -58,7 +58,7 @@ const useSearchDetails = (id) => {
           setError({ errorMessage: "Error occured during load, try again" });
         });
     };
-    getResultDetails();
+    handleSearchDetails();
   }, [id]);
   return { loading, resultDetails, error };
 };

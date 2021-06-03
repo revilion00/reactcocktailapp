@@ -8,12 +8,16 @@ const useSearchCocktails = (input) => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY_SEARCH;
+    let cancel;
 
     const handleSearchCocktail = async () => {
       setLoading(true);
       await axios
-        .get(API_KEY + input)
+        .get(API_KEY + input, {
+          cancelToken: new axios.CancelToken((c) => (cancel = c)),
+        })
         .then(async (response) => {
+          console.log(response);
           const { drinks } = await response.data;
           if (drinks) {
             const newDrink = drinks.map((drink) => {
@@ -38,7 +42,8 @@ const useSearchCocktails = (input) => {
             setResults([]);
           }
         })
-        .catch(() => {
+        .catch((e) => {
+          if (axios.isCancel(e)) return;
           setResults([]);
           setLoading(false);
           setError({ errorMessage: "Error occured during search, try again" });
@@ -46,6 +51,7 @@ const useSearchCocktails = (input) => {
       setLoading(false);
     };
     handleSearchCocktail();
+    return () => cancel();
   }, [input]);
   return { results, loading, error };
 };
