@@ -1,28 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 //CSS import
-import './styles/About.css';
-import './styles/GeneralStyling.css';
-import './styles/Input.css';
-import './styles/Loading.css';
-import './styles/Navbar.css';
-import './styles/Reset.css';
-import './styles/ResultDetails.css';
-import './styles/ResultSection.css';
-import './styles/Responsive.css';
+import "./styles/About.css";
+import "./styles/GeneralStyling.css";
+import "./styles/Input.css";
+import "./styles/Loading.css";
+import "./styles/Navbar.css";
+import "./styles/Reset.css";
+import "./styles/ResultDetails.css";
+import "./styles/ResultSection.css";
+import "./styles/Responsive.css";
 
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { GlobalProvider } from "./GlobalContext";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { GlobalProvider } from "./context/GlobalContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalProvider>
-    <App />
+      <App />
     </GlobalProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
