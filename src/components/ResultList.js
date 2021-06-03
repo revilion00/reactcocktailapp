@@ -5,7 +5,7 @@ import Result from "./Result";
 import LoadingAnimation from "./LoadingAnimation";
 
 const ResultList = () => {
-  const { results, loading } = useGlobalContext();
+  const { results, loading, error } = useGlobalContext();
 
   if (loading) {
     return <LoadingAnimation />;
@@ -13,6 +13,14 @@ const ResultList = () => {
 
   if (results.length < 1) {
     return <h2 className="info-box">No results found</h2>;
+  }
+
+  if (error.errorMessage) {
+    return (
+      <div className="info-box">
+        <p className="error-message">{error.errorMessage}</p>
+      </div>
+    );
   }
 
   return (

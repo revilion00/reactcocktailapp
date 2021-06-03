@@ -34,3 +34,8 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+.error-message {
+  color: #fff;
+  font-size: 18px;
+}

@@ -53,9 +53,9 @@ const useSearchDetails = (id) => {
           }
           setLoading(false);
         })
-        .catch((error) => {
+        .catch(() => {
           setLoading(false);
-          setError({ errorMessage: "Error occured during load" });
+          setError({ errorMessage: "Error occured during load, try again" });
         });
     };
     getResultDetails();

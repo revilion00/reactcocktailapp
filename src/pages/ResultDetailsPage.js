@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import useSearchDetails from "../hooks/useSearchDetails";
 import LoadingAnimation from "../components/LoadingAnimation";
@@ -11,6 +10,15 @@ const ResultDetails = () => {
   if (loading) {
     return <LoadingAnimation />;
   }
+
+  if (error.errorMessage) {
+    return (
+      <div className="info-box">
+        <p className="error-message">{error.errorMessage}</p>
+      </div>
+    );
+  }
+
   if (resultDetails < 1) {
     return (
       <div className="info-box">
@@ -24,7 +32,7 @@ const ResultDetails = () => {
     let { alcoholic, category, name, image, glass, instruction, ingredients } =
       resultDetails[0];
 
-    const arrayToString = () => {
+    const handleArrayToString = () => {
       ingredients = ingredients.filter(Boolean);
       const ingredientsArray = ingredients.join(", ");
       return <span>{ingredientsArray}</span>;
@@ -57,7 +65,7 @@ const ResultDetails = () => {
 
           <div className="details-box">
             <span className="span">ingredients:</span>
-            <p className="paragraph">{arrayToString()}</p>
+            <p className="paragraph">{handleArrayToString()}</p>
           </div>
 
           <div className="details-box">

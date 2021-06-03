@@ -8,7 +8,7 @@ const useSearchCocktails = (input) => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY_SEARCH;
-    console.log(API_KEY);
+
     const handleSearchCocktail = async () => {
       setLoading(true);
       await axios
@@ -38,11 +38,10 @@ const useSearchCocktails = (input) => {
             setResults([]);
           }
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
           setResults([]);
           setLoading(false);
-          setError({ errorMessage: "Error occured during search" });
+          setError({ errorMessage: "Error occured during search, try again" });
         });
       setLoading(false);
     };
