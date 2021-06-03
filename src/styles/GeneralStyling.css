@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
 body {
   min-height: 100vh;
-  background-color: #1D0E2E; 
+  background-color: #1d0e2e;
   font-family: "Lato", "Montserrat", sans-serif;
-  }
-  
+}
+
 .info-box {
   display: flex;
   align-items: center;
@@ -12,24 +12,24 @@ body {
   margin-top: 100px;
   color: #fff;
 }
-  
+
 .button {
   padding: 10px 20px;
-  background-color: #BA54EB;
+  background-color: #ba54eb;
   border-radius: 12px;
   font-weight: 600;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   text-decoration: none;
   color: #fff;
-  
+
   transition: 0.4s ease-out;
 }
-  
+
 .button:hover {
   transform: scale(1.1);
 }
-  
+
 .link {
   text-decoration: none;
   color: #fff;

@@ -27,7 +27,7 @@
 .paragraph {
   margin: 10px 0px;
   max-width: 600px;
-  letter-spacing: 0.10rem;
+  letter-spacing: 0.1rem;
 }
 
 .paragraph.responsive {
@@ -37,7 +37,7 @@
 
 .paragraph.responsive::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8)
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .paragraph.responsive::-webkit-scrollbar {
@@ -47,12 +47,12 @@
 
 .paragraph.responsive::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color:  #7B6DCC;
+  background-color: #7b6dcc;
   height: 40px;
 }
 
- .span {
-  background-color: #7B6DCC;
+.span {
+  background-color: #7b6dcc;
   padding: 4px 6px;
   border-radius: 8px;
   margin-right: 5px;

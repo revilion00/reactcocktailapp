@@ -4,16 +4,16 @@
   align-items: center;
   margin-top: 50px;
 }
-  
+
 .input-title {
   font-size: 32px;
   color: #fff;
 }
-  
+
 input {
   appearance: none;
   outline: none;
-  
+
   border: 2px #514665 solid;
   background: none;
   border-radius: 12px;
@@ -22,5 +22,6 @@ input {
   max-width: 300px;
   width: 100%;
   color: #fff;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
