@@ -17,9 +17,9 @@ const App = () => {
         <GlobalProvider>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/drink/:id" component={ResultDetailsPage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route path="*" component={ErrorPage} />
         </GlobalProvider>
-        <Route exact path="/about" component={AboutPage} />
-        <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>
   );
