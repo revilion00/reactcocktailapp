@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GlobalProvider } from "./context/GlobalContext";
 
 import Header from "./components/Header";
 
@@ -13,9 +14,11 @@ const App = () => {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <GlobalProvider>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/drink/:id" component={ResultDetailsPage} />
+        </GlobalProvider>
         <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/drink/:id" component={ResultDetailsPage} />
         <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>

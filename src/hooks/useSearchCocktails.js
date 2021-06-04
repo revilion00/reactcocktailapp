@@ -17,7 +17,6 @@ const useSearchCocktails = (input) => {
           cancelToken: new axios.CancelToken((c) => (cancel = c)),
         })
         .then(async (response) => {
-          console.log(response);
           const { drinks } = await response.data;
           if (drinks) {
             const newDrink = drinks.map((drink) => {

@@ -14,13 +14,10 @@ import "./styles/Responsive.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { GlobalProvider } from "./context/GlobalContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalProvider>
-      <App />
-    </GlobalProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
