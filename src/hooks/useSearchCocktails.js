@@ -7,7 +7,7 @@ const useSearchCocktails = (input) => {
   const [error, setError] = useState({});
 
   useEffect(() => {
-    const API_KEY = process.env.REACT_APP_API_KEY_SEARCH;
+    const API_KEY = process.env.REACT_APP_API_SEARCH_URL;
     let cancel;
 
     const handleSearchCocktail = async () => {

@@ -7,7 +7,7 @@ const useSearchDetails = (id) => {
   const [error, setError] = useState({});
 
   useEffect(() => {
-    const API_KEY = process.env.REACT_APP_API_KEY_ID;
+    const API_KEY = process.env.REACT_APP_API_ID_LOOKUP_URL;
 
     const handleSearchDetails = async () => {
       setLoading(true);
