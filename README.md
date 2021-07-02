@@ -4,7 +4,7 @@ React project that allows users to search for cocktails and information about it
 
 
 <h1>Instalation</h1>
-<pre>$ git clone https://github.com/revilion00/reactcocktailapp.git</pre>
+<pre>$ git clone https://github.com/patryk-harasiuk/reactcocktailapp.git</pre>
 <pre>$ cd reactcocktailapp</pre>
 Install dependencies
 <pre>$ npm install</pre>
